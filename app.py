@@ -46,7 +46,6 @@ def main():
         st.markdown('''
             <div align="center">
                 <h1>Task Exploration: Hate Speech Detection</h1>
-)
             </div>
         ''', unsafe_allow_html=True)
         st.markdown('---')
