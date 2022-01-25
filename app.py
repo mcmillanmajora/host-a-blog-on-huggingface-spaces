@@ -45,9 +45,8 @@ def main():
     
         st.markdown('''
             <div align="center">
-                <h1>A Test Blog!</h1>
-
-            [![Github Badge](https://img.shields.io/github/stars/nateraw/host-a-blog-on-huggingface-spaces?style=social)](https://github.com/nateraw/host-a-blog-on-huggingface-spaces)
+                <h1>Task Exploration: Hate Speech Detection</h1>
+)
             </div>
         ''', unsafe_allow_html=True)
         st.markdown('---')
