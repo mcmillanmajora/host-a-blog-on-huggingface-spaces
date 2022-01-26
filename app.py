@@ -39,7 +39,12 @@ def get_page_data(post_path: Path):
 
 def main():
     st.set_page_config(layout="wide")
-    posts = ['posts/welcome.md', 'posts/context.md']
+    posts = ['posts/welcome.md', 
+             'posts/context.md', 
+             'posts/dataset_exploration.md',
+             'posts/model_exploration.md',
+             'posts/conclusion.md'
+            ]
     page_to_show = 'posts/welcome.md'
     with st.sidebar:
     
