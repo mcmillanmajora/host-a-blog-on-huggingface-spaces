@@ -39,8 +39,8 @@ def get_page_data(post_path: Path):
 
 def main():
     st.set_page_config(layout="wide")
-    posts = ['posts/hello_world.md', 'posts/check_this_out.md']
-    page_to_show = None
+    posts = ['posts/welcome.md', 'posts/context.md']
+    page_to_show = 'posts/welcome.md
     with st.sidebar:
     
         st.markdown('''
