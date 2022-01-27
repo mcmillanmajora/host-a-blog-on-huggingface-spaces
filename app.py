@@ -28,24 +28,24 @@ def render_page(post_path: Path):
 
 
 def get_page_data(post_path: Path):
-    text = post_path.read_text()
-    match = REGEX_YAML_BLOCK.search(text)
-    if match:
-        data = match.group(1)
-        data = yaml.load(data, Loader=yaml.FullLoader)
-        return data
-    return {}
+    mod = importlib.import_module(str(post_path))
+    return {
+        "title": mod.title,
+        "description": mod.description,
+        "date": mod.date,
+        "thumbnail": mod.thumbnail,
+    }
 
 
 def main():
     st.set_page_config(layout="wide")
-    posts = ['posts/welcome.md', 
-             'posts/context.md', 
-             'posts/dataset_exploration.md',
-             'posts/model_exploration.md',
-             'posts/conclusion.md'
+    posts = ['posts.welcome', 
+             'posts.context', 
+             'posts.dataset_exploration',
+             'posts.model_exploration',
+             'posts.conclusion'
             ]
-    page_to_show = 'posts/welcome.md'
+    page_to_show = posts[0]
     with st.sidebar:
     
         st.markdown('''
