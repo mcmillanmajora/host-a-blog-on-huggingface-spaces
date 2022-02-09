@@ -17,9 +17,20 @@ def run_article():
   *This is where the current platforms and approaches with go.*  
   Automated content moderation has relied both on analysis of the contents (e.g. relying on natural language processing and computer vision) as well as user dynamics (e.g. whether the accounts share followers, when the account was created). Within the realm of text-based ACM, approaches vary from wordlist-based approaches to data-driven models. Common datasets used for training and evaluating hatespeech detectors can be found at https://hatespeechdata.com/
 
+  # What kind of content is subject to moderation?
+  Different platforms have different guidelines about what content is allowed on the platform. (TODO: brief survey of guidelines?) For example, many US-based platforms prohibit posting threats of violence, nudity, and hate speech. We discuss hate speech below.
+  
+  # What is hate speech? 
+  Hate speech is hard to define. The Anti-Defamation League 
+
   # Current Challenges
 
-  This is where the discussion of current challenges, examples from media, and value tensions will go.
+  *This is where the discussion of current challenges, examples from media, and value tensions will go.*
+  
+  A [2021 survey](https://www.adl.org/online-hate-2021) from the Anti-Defamation League found an increase in online hate & harassment directed at LGBTQ+, Asian American, Jewish, and African American individuals.
+  Counterspeech vs. hate speech
+  
+  Example: "Only six percent of Arabic-language hate content was detected on Instagram before it made its way onto the photo-sharing platform owned by Facebook." from https://www.politico.com/news/2021/10/25/facebook-moderate-posts-violent-countries-517050 
 
   So what does all this mean for conceptualizing this real world problem as a machine learning task? First we'll look at the data, then at the models.
   """)
