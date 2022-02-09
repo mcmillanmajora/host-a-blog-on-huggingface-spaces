@@ -1,5 +1,5 @@
 ---
-title: Host a Blog on HuggingFace Spaces
+title: Task Exploration: Hate Speech Detection
 emoji: 🤗
 colorFrom: blue
 colorTo: red
@@ -8,11 +8,11 @@ app_file: app.py
 pinned: false
 ---
 
-# Host a Blog on HuggingFace Spaces
+# Task Exploration
 
 [![Generic badge](https://img.shields.io/badge/🤗-Open%20In%20Spaces-blue.svg)](https://huggingface.co/spaces/aymm/Task-Exploration-Hate-Speech)
 
-How to host a blog on 🤗
+The context and definition of hate speech detection as a modeling task
 
 ---
 
