@@ -1,5 +1,5 @@
 ---
-title: Task Exploration: Hate Speech Detection
+title: Task Exploration - Hate Speech Detection
 emoji: 🤗
 colorFrom: blue
 colorTo: red
