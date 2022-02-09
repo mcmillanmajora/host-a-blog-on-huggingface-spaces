@@ -21,8 +21,10 @@ def run_article():
   Different platforms have different guidelines about what content is allowed on the platform. (TODO: brief survey of guidelines?) For example, many US-based platforms prohibit posting threats of violence, nudity, and hate speech. We discuss hate speech below.
   
   # What is hate speech? 
-  Hate speech is hard to define. The Anti-Defamation League 
-
+  Hate speech is hard to define, with definitions shifting across time and location. In 2019, the United Nations [defined](https://www.un.org/en/genocideprevention/documents/advising-and-mobilizing/Action_plan_on_hate_speech_EN.pdf) hate speech as "any kind of communication in speech, writing or behaviour, that attacks or uses pejorative or discriminatory language with reference to a person or a group on the basis of who they are, in other words, based on their religion, ethnicity, nationality, race, colour, descent, gender or other identity factor."
+  
+  
+  
   # Current Challenges
 
   *This is where the discussion of current challenges, examples from media, and value tensions will go.*
