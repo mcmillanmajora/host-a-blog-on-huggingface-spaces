@@ -15,7 +15,23 @@ def run_article():
     st.markdown("""
     # Making a Hate Speech Detection Model
 
-    This is where design choices will go.
+    Once the data has been collected using the definitions identified for the 
+    task, you can start training your model. At training, the model takes in 
+    the data with labels and learns the associated context in the input data 
+    for each label. Depending on the task design, the labels may be binary like 
+    'hateful' and 'non-hateful' or multiclass like 'neutral', 'offensive', and 
+    'attack'. 
+    
+    When presented with a new input string, the model then predicts the 
+    likelihood that the input is classified as each of the available labels and
+    returns the label with the highest likelihood as well as how confident the 
+    model is in its selection using a score from 0 to 1. 
+    
+    Neural models such as transformers are frequently trained as general 
+    language models and then fine-tuned on specific classification tasks.
+    These models can vary in their architecture and the optimization 
+    algorithms, sometimes resulting in very different output for the same 
+    input text. 
 
     # Model Output Ranking
 
@@ -26,14 +42,23 @@ def run_article():
                    ["classla/roberta-base-frenk-hate",
                     "cardiffnlp/twitter-roberta-base-hate",
                     "Hate-speech-CNERG/dehatebert-mono-english"],
+                    key="rank_model_select"
                     )
 
+            # the placeholder key functionality was added in v1.2 of streamlit
+            # and versions on Spaces currently goesup to v1.0
             input_1 = st.text_input("Input 1",
-                                    placeholder="We shouldn't let [IDENTITY] suffer.")
+                                    #placeholder="We shouldn't let [IDENTITY] suffer.",
+                                    help= "Try a phrase like 'We shouldn't let [IDENTITY] suffer.'",
+                                    key="rank_input_1")
             input_2 = st.text_input("Input 2",
-                                    placeholder="I'd rather die than date [IDENTITY].")
+                                    #placeholder="I'd rather die than date [IDENTITY].",
+                                    help= "Try a phrase like 'I'd rather die than date [IDENTITY].'",
+                                    key="rank_input_2")
             input_3 = st.text_input("Input 3",
-                                    placeholder="Good morning.")
+                                    #placeholder="Good morning.",
+                                    help= "Try a phrase like 'Good morning'",
+                                    key="rank_input_3")
             inputs = [input_1, input_2, input_3]
 
             if st.form_submit_button(label="Rank inputs"):
@@ -61,7 +86,8 @@ def run_article():
                                 ],
                                 key='compare_model_2'
                                 )
-            input_text = st.text_input("Comparison input")
+            input_text = st.text_input("Comparison input",
+                                       key="compare_input")
             if st.form_submit_button(label="Compare models"):
                 results = run_compare(model_name_1, model_name_2, input_text)
                 st.dataframe(results)
@@ -110,4 +136,8 @@ def run_compare(name_1, name_2, text):
     return [out_1, out_2]
     
 
+def main():
+    run_article()
+    
+main()
     
